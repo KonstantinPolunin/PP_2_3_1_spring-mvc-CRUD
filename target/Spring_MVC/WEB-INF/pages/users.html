@@ -19,10 +19,10 @@
             <td th:utext="${user.getName()}">...</td>
         </tr>
     </table>-->
-    <a th:href="@{/users/{id}(id=${user.getId()})}"  th:text="${user.getName()}">user</a>
+    <a th:href="@{/{id}(id=${user.getId()})}"  th:text="${user.getName()}">user</a>
 </div>
 <br/>
 <hr/>
-<a th:href="@{/users/new}">Create</a>
+<a th:href="@{/new}">Create</a>
 </body>
 </html>

@@ -29,6 +29,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 public class SpringConfig implements WebMvcConfigurer {
 
+
     private final ApplicationContext applicationContext;
 
     private final Environment env;
