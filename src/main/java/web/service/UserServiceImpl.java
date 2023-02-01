@@ -24,8 +24,8 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
-    public List<User> listUsers() {
-        return userDao.listUsers();
+    public List<User> getListUsers() {
+        return userDao.getListUsers();
     }
 
     @Transactional
@@ -34,11 +34,6 @@ public class UserServiceImpl implements UserService {
         return userDao.getUserById(id);
     }
 
-    @Transactional
-    @Override
-    public void update(Long id, User user) {
-        userDao.update(id, user);
-    }
 
     @Transactional
     @Override

@@ -6,20 +6,26 @@
     <title></title>
 </head>
 <body>
-<la>id: </la><tr th:text="${user.getId()}">id</tr>
+id: <tr th:text="${user.getId()}">id</tr>
 <br/>
-<la>name: </la> <tr th:text="${user.getName()}">name</tr>
+name: <tr th:text="${user.getName()}">name</tr>
 <br/>
-<la>age: </la><tr th:utext="${user.getAge()}">age</tr>
+age: <tr th:utext="${user.getAge()}">age</tr>
 <br/>
 <!--<a th:href="@{/{id}/edit(id=${user.getId()})}">Update</a>-->
-<form th:method="GET" th:action="@{/{id}/edit(id=${user.getId()})}">
+<!--<form th:method="GET" th:action="@{/{id}/edit(id=${user.getId()})}">
     <input type="submit" value="Update"/>
-</form>
+</form>-->
 
-<form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
+<!--<form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
     <input type="submit" value="Delete"/>
-</form>
+</form>-->
+<a th:href="@{'/edit/?id='+${user.id}}">
+    <input type="button" value="update">
+</a>
+<a th:href="@{'/deleteUser/?id='+${user.id}}">
+    <input type="button" value="delete">
+</a>
 
 
 </body>

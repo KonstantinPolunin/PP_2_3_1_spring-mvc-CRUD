@@ -19,7 +19,8 @@
             <td th:utext="${user.getName()}">...</td>
         </tr>
     </table>-->
-    <a th:href="@{/{id}(id=${user.getId()})}"  th:text="${user.getName()}">user</a>
+    <!--<a th:href="@{/{id}(id=${user.getId()})}"  th:text="${user.getName()}">user</a>-->
+    <a th:href="@{'/user/?id='+${user.id}}" th:text="${user.getName()}">user></a>
 </div>
 <br/>
 <hr/>
